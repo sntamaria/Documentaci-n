@@ -1,0 +1,93 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap%27);
+
+/* Estilos globales */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Establece reglas generales para todos los elementos */
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #2196f3, #ff4685);
+}
+
+/* Establece el cuerpo del documento como un contenedor flexbox centrado vertical y horizontalmente. Además, define un fondo degradado utilizando un linear-gradient */
+.container{
+    position: relative;
+    padding: 50px;
+    background: #fff;
+    display: flex;
+    justify-content: center;align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0.25);
+}
+
+/* Crea un contenedor principal para el formulario */
+.inputBox{
+    position: relative;
+    width: 350px;
+}
+
+/* Establece un contenedor para el campo de entrada de texto */
+.inputBox input{
+    position: relative;
+    padding: 8px 10px;
+    border:none;
+    outline: none;
+    width: 100%;
+    background: transparent;
+    color: #fff;
+    font-size: 1.25em;
+    transition: 0.5s;
+    letter-spacing: 0.05em;
+    z-index: 2;
+}
+
+/* Establece el estilo para el campo de entrada de texto */
+.inputBox span{
+    position: absolute;
+    left:0;
+    padding: 10px 0;
+    pointer-events: none;
+    font-size: 1em;
+    transition: 0.5s;
+    letter-spacing: 0.05em;
+    color: #333;
+}
+
+/* Establece el estilo para la etiqueta que se muestra encima del campo de entrada */
+.inputBox input:valid~span,
+.inputBox input:focus ~span{
+    font-size: 0.85em;
+    transform: translateY(-32px);
+}
+
+/* Establece el estilo para la etiqueta cuando el campo de entrada tiene un valor válido o cuando el campo de entrada está enfocado, incluyendo la transición de tamaño y la transformación */
+
+.inputBox i{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(45deg, #2196f3, #ff4685);
+    transition: 2s;
+    z-index: 1;
+    border-radius: 4px;
+    pointer-events: none;
+}
+
+/* Establece el estilo para el subrayado del campo de entrada, incluyendo la posición absoluta, el tamaño y el fondo degradado */
+
+.inputBox input:valid~i,
+.inputBox input:focus~i{
+    height: 100%;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0.25);
+}
